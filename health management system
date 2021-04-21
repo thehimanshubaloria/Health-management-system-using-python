@@ -1,0 +1,89 @@
+import datetime
+def gettime():
+    return datetime.datetime.now()
+print("Health management system")
+print("Press 1 for log the value and 2 for retrieve\n")
+value=int(input())
+if value==1:
+ print("Press 1 for himanshu\n Press 2 for rohan\n Press 3 for sukhdeep")
+ diet=int(input())
+ if diet==1:
+    print("Enter 1 for exercise chart\n Enter 2 for food chart")
+    type=int(input())
+    if type==1:
+        show=(input("Type value here\n"))
+        with open("himanshu-ex.txt","a") as op:
+          op.write(str([str(gettime())]) + ": " + show + "\n")
+        print("successfully written")
+
+    elif type==2:
+        show=(input("Type value here\n"))
+        with open("himanshu-food.txt", "a") as op:
+         op.write(str([str(gettime())]) + ": " + show + "\n")
+        print("successfully written")
+ if diet==2:
+    print("Enter 1 for exercise chart\n Enter 2 for food chart")
+    type = int(input())
+    if type==1:
+      show = (input("Type value here\n"))
+      with open("rohan-ex.txt","a") as op:
+       op.write(str([str(gettime())]) + ": " + show + "\n")
+      print("successfully written")
+    elif type==2:
+      show = (input("Type value here\n"))
+      with open("rohan-ex.txt", "a") as op:
+       op.write(str([str(gettime())]) + ": " + show + "\n")
+      print("successfully written")
+ if diet==3:
+    print("Enter 1 for exercise chart\n Enter 2 for food chart")
+    type = int(input())
+    if type==1:
+        show=(input("Type value here\n"))
+        with open("sukhdeep-ex.txt", "a") as op:
+         op.write(str([str(gettime())]) + ": " + show + "\n")
+        print("successfully written")
+    elif type==2:
+      show=(input("Type value here\n"))
+      with open("sukhdeep-food.txt", "a") as op:
+       op.write(str([str(gettime())]) + ": " + show + "\n")
+      print("successfully written")
+elif value==2:
+    print("Press 1 for himanshu\n Press 2 for rohan\n Press 3 for sukhdeep")
+    plan = int(input())
+    if plan==1:
+        print("Enter 1 for exercise chart\n Enter 2 for food chart")
+        hub=int(input())
+        if hub==1:
+          with open("himanshu-ex.txt") as g:
+              for i in g:
+                  print(i, end="")
+        elif hub==2:
+            with open("himanshu-food.txt") as g:
+                for i in g:
+                    print(i, end="")
+    if plan==2:
+        print("Enter 1 for exercise chart\n Enter 2 for food chart")
+        hub=int(input())
+        if hub==1:
+          with open("rohan-ex.txt") as g:
+              for i in g:
+                print(i, end="")
+        elif hub==2:
+            with open("rohan-food.txt") as g:
+                for i in g:
+                 print(i, end="")
+    if plan==3:
+        print("Enter 1 for exercise chart\n Enter 2 for food chart")
+        hub=int(input())
+        if hub==1:
+          with open("sukhdeep-ex.txt") as g:
+              for i in g:
+                  print(i, end="")
+        elif hub==2:
+            with open("sukhdeep-food.txt") as g:
+                for i in g:
+                    print(i, end="")
+
+else:
+ print("INVALID OUTPUT")
+
